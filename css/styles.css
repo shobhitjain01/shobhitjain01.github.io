@@ -1950,6 +1950,19 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+    .masthead {
+        flex-direction: column !important; /* Stack items vertically */
+        align-items: center !important; /* Center content */
+        text-align: center;
+        padding-left: 5%; /* Add padding so it doesn't touch edges */
+        padding-right: 5%;
+    }
+
+    .header-container {
+        width: 90% !important; /* Make it take up almost full width */
+        max-width: 600px; /* Keep it readable on larger mobile screens */
+        margin: 10px auto; /* Center it properly */
+    }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -11013,13 +11026,16 @@ html {
   padding-bottom: 6rem;
 }
 .masthead .masthead-heading {
-  font-size: 2.75rem;
+  font-size: 1.5rem;
   line-height: 2.75rem;
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
 }
-.masthead .masthead-avatar {
+.masthead {
+  width: 100%;
+}
+.masthead-avatar {
   width: 20rem;
   border-radius: 50%;
   border: 5px solid white;
@@ -11031,10 +11047,15 @@ html {
     padding-bottom: 6rem;
   }
   .masthead .masthead-heading {
-    font-size: 4rem;
     line-height: 3.5rem;
   }
-  .masthead .masthead-subheading {
+  .masthead {
+    font-size: 1.5rem;
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Distribute space evenly */
+    width: 100%;
+  }
+  .masthead-subheading {
     font-size: 1.75rem;
     display: flex; /* Enable Flexbox */
     justify-content: space-between; /* Distribute space evenly */
@@ -11115,4 +11136,12 @@ html {
     width: 100%;   /* Make the iframe fill the container's width */
     height: 100%;  /* Make the iframe fill the container's height */
     border: none;  /* Optional: removes iframe border */
+}
+
+.header-container {
+    width: 50%; /* 50% width for larger screens */
+    padding: 2%;
+    background-color: #000;  /* Optional: background color */
+    border-radius: 10px; /* Optional: Rounded corners */
+    text-align: center; /* Ensures text stays centered */
 }
