@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 135, 206, 235;
+  --bs-primary-rgb: 225, 239, 254;
   --bs-secondary-rgb: 44, 62, 80;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -1944,6 +1944,10 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+    .header-container {
+        font-size: 1.1rem; /* Slightly larger text */
+        text-align: left; /* Explicitly left-align text on small screens */
+    }
 }
 @media (max-width: 767.98px) {
   .table-responsive-md {
@@ -11170,4 +11174,9 @@ html {
     .move-left {
         margin-left: -5%;
     }
+}
+
+.col-md-7 {
+    color: #333;  /* Black text */
+    padding: 20px;  /* Add some space inside */
 }
