@@ -11157,3 +11157,17 @@ html {
         margin: 10px auto;
     }
 }
+
+@media (min-width: 992px) {
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Ensures text is left-aligned */
+    }
+
+    /* Move the entire right column slightly to the left */
+    .move-left {
+        margin-left: -5%;
+    }
+}
