@@ -11199,17 +11199,25 @@ html {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
+    .masthead-avatar {
+        width: 20rem;  /* Adjust size for mobile */
+        border-radius: 50%;
+        border: 5px solid white;
+    }
+
     .header-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start; /* Ensures text is left-aligned */
+        font-size: 1.5rem;
     }
 
     /* Move the entire right column slightly to the left */
     .move-left {
-        margin-left: -5%;
+        margin-left: -3%;
+        margin-right: 3%;
     }
 }
 
