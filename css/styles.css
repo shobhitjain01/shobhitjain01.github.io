@@ -11171,9 +11171,9 @@ html {
     }
 
     .header-container {
-        width: 90% !important; /* Make full width but leave margins */
+        width: 100% !important; /* Make full width but leave margins */
         max-width: 600px;
-        margin: 10px auto;
+        margin: 5px auto;
     }
 }
 
