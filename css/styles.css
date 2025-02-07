@@ -11139,9 +11139,21 @@ html {
 }
 
 .header-container {
-    width: 50%; /* 50% width for larger screens */
     padding: 2%;
-    background-color: #000;  /* Optional: background color */
-    border-radius: 10px; /* Optional: Rounded corners */
-    text-align: center; /* Ensures text stays centered */
+}
+
+@media (max-width: 768px) {
+    .masthead {
+        flex-direction: column !important; /* Stack vertically */
+        align-items: center !important; /* Center content */
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .header-container {
+        width: 90% !important; /* Make full width but leave margins */
+        max-width: 600px;
+        margin: 10px auto;
+    }
 }
