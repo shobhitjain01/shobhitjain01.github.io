@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 135, 206, 235;
+  --bs-primary-rgb: 225, 239, 254;
   --bs-secondary-rgb: 44, 62, 80;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -1944,12 +1944,29 @@ progress {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+    .header-container {
+        font-size: 1.1rem; /* Slightly larger text */
+        text-align: left; /* Explicitly left-align text on small screens */
+    }
 }
 @media (max-width: 767.98px) {
   .table-responsive-md {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+    .masthead {
+        flex-direction: column !important; /* Stack items vertically */
+        align-items: center !important; /* Center content */
+        text-align: center;
+        padding-left: 5%; /* Add padding so it doesn't touch edges */
+        padding-right: 5%;
+    }
+
+    .header-container {
+        width: 90% !important; /* Make it take up almost full width */
+        max-width: 600px; /* Keep it readable on larger mobile screens */
+        margin: 10px auto; /* Center it properly */
+    }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -11013,13 +11030,16 @@ html {
   padding-bottom: 6rem;
 }
 .masthead .masthead-heading {
-  font-size: 2.75rem;
+  font-size: 1.5rem;
   line-height: 2.75rem;
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
 }
-.masthead .masthead-avatar {
+.masthead {
+  width: 100%;
+}
+.masthead-avatar {
   width: 20rem;
   border-radius: 50%;
   border: 5px solid white;
@@ -11031,10 +11051,15 @@ html {
     padding-bottom: 6rem;
   }
   .masthead .masthead-heading {
-    font-size: 4rem;
     line-height: 3.5rem;
   }
-  .masthead .masthead-subheading {
+  .masthead {
+    font-size: 1.5rem;
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Distribute space evenly */
+    width: 100%;
+  }
+  .masthead-subheading {
     font-size: 1.75rem;
     display: flex; /* Enable Flexbox */
     justify-content: space-between; /* Distribute space evenly */
@@ -11115,4 +11140,43 @@ html {
     width: 100%;   /* Make the iframe fill the container's width */
     height: 100%;  /* Make the iframe fill the container's height */
     border: none;  /* Optional: removes iframe border */
+}
+
+.header-container {
+    padding: 2%;
+}
+
+@media (max-width: 768px) {
+    .masthead {
+        flex-direction: column !important; /* Stack vertically */
+        align-items: center !important; /* Center content */
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .header-container {
+        width: 90% !important; /* Make full width but leave margins */
+        max-width: 600px;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Ensures text is left-aligned */
+    }
+
+    /* Move the entire right column slightly to the left */
+    .move-left {
+        margin-left: -5%;
+    }
+}
+
+.col-md-7 {
+    color: #333;  /* Black text */
+    padding: 20px;  /* Add some space inside */
 }
