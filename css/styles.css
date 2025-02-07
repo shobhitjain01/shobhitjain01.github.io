@@ -43,6 +43,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 225, 239, 254;
+  --bs-menu: 135, 206, 235;
   --bs-secondary-rgb: 44, 62, 80;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -8162,7 +8163,7 @@ textarea.form-control-lg {
 
 .bg-menu {
   --bs-bg-opacity: 1;
-  background-color: rgba(135, 206, 235, var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-menu), var(--bs-bg-opacity)) !important;
 }
 
 .bg-secondary {
@@ -11062,7 +11063,7 @@ html {
     font-size: 1.5rem;
     display: flex; /* Enable Flexbox */
     justify-content: space-between; /* Distribute space evenly */
-    width: 100%;
+    width: 100vw;  /* Full viewport width */
   }
   .masthead-subheading {
     font-size: 1.75rem;
@@ -11158,6 +11159,7 @@ html {
         text-align: center;
         padding-left: 5%;
         padding-right: 5%;
+        width: 100vw;  /* Full viewport width */
     }
 
     .header-container {
