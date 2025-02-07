@@ -11152,7 +11152,7 @@ html {
     padding: 2%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .masthead {
         flex-direction: column !important;
         align-items: center !important;
@@ -11175,9 +11175,41 @@ html {
         max-width: 600px;
         margin: 5px auto;
     }
+
+    .row {
+        display: flex;
+        justify-content: center; /* Center the content in the row */
+    }
+
+    .col-md-6, .col-lg-4 {
+        display: flex;
+        justify-content: center; /* Ensure video container is centered */
+    }
 }
 
 @media (min-width: 992px) {
+    .masthead-avatar {
+        width: 17rem;  /* Adjust size for mobile */
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-top: 20px;  /* Additional margin to separate from header */
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Ensures text is left-aligned */
+        font-size: 1.2rem;
+    }
+
+    /* Move the entire right column slightly to the left */
+    .move-left {
+        margin-left: 0%;
+    }
+}
+
+@media (min-width: 1200px) {
     .header-container {
         display: flex;
         flex-direction: column;
