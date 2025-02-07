@@ -11154,13 +11154,20 @@ html {
 
 @media (max-width: 768px) {
     .masthead {
-        flex-direction: column !important; /* Stack vertically */
-        align-items: center !important; /* Center content */
+        flex-direction: column !important;
+        align-items: center !important;
         text-align: center;
-        width: 100vw !important;  /* Full viewport width */
+        width: 100vw !important;
         margin: 0 !important;
-        padding: 0 5%; /* Add side padding if needed */
-        box-sizing: border-box; /* Prevent overflow issues */
+        padding: 80px 5% 20px;  /* Add top padding to avoid header cut-off */
+        box-sizing: border-box;
+    }
+
+    .masthead-avatar {
+        width: 15rem;  /* Adjust size for mobile */
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-top: 20px;  /* Additional margin to separate from header */
     }
 
     .header-container {
