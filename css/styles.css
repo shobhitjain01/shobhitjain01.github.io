@@ -11157,9 +11157,10 @@ html {
         flex-direction: column !important; /* Stack vertically */
         align-items: center !important; /* Center content */
         text-align: center;
-        padding-left: 5%;
-        padding-right: 5%;
-        width: 100vw;  /* Full viewport width */
+        width: 100vw !important;  /* Full viewport width */
+        margin: 0 !important;
+        padding: 0 5%; /* Add side padding if needed */
+        box-sizing: border-box; /* Prevent overflow issues */
     }
 
     .header-container {
