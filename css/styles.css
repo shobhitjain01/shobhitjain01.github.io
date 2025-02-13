@@ -11225,3 +11225,43 @@ html {
     color: #333;  /* Black text */
     padding: 20px;  /* Add some space inside */
 }
+
+.certificate-gallery img {
+    width: 200px; /* Adjust as needed */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.certificate-gallery img:hover {
+    transform: scale(1.1);
+}
+
+.certificate-img {
+        max-height: 180px; /* Prevent images from being too large */
+        object-fit: contain; /* Maintain aspect ratio */
+    }
+
+    .portfolio-item {
+        position: relative;
+    }
+
+    .portfolio-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-caption {
+        opacity: 1;
+    }
+
+    .portfolio-caption h5 {
+        font-size: 16px;
+        margin: 0;
+    }
