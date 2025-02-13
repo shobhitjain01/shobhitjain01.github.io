@@ -52,3 +52,12 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+function openModal(imageElement) {
+    document.getElementById("certificateModal").style.display = "flex";
+    document.getElementById("modalImg").src = imageElement.src;
+}
+
+function closeModal() {
+    document.getElementById("certificateModal").style.display = "none";
+}
